@@ -1,0 +1,15 @@
+<!-- templates/inventory/product_list.html -->
+<h1>All Products</h1>
+<ul>
+    {% for product in products %}
+        <li>
+            <a href="{% url 'inventory:product_detail_single' pk=product.pk %}">
+                {{ product.product_type }} - {{ product.weight }}g
+            </a>
+        </li>
+    {% empty %}
+        <p>No products available.</p>
+    {% endfor %}
+</ul>
+
+

@@ -1,5 +1,4 @@
 # created by virtualenv automatically
-*
 # Ignore virtual environments
 # Ignore the virtual environment
 my_env/
@@ -15,7 +14,6 @@ db.sqlite3
 media/
 
 # Ignore any IDE/editor-related files (e.g., VSCode, PyCharm)
-.vscode/
 .idea/
 
 # Ignore system files

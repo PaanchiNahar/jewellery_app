@@ -1,0 +1,30 @@
+<!-- templates/inventory/scan_qr.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan QR Code</title>
+</head>
+<body>
+    <h1>Scan QR Code</h1>
+    <video id="preview" width="100%" height="auto"></video>
+
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script>
+        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+        scanner.addListener('scan', function (content) {
+            window.location.href = content; // Redirect to product detail URL
+        });
+
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]); // phone usually uses back camera
+            } else {
+                alert('No cameras found.');
+            }
+        }).catch(function (e) {
+            console.error(e);
+        });
+    </script>
+</body>
+</html>
+

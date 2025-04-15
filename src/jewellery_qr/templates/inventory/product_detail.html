@@ -1,0 +1,13 @@
+<!-- templates/inventory/product_detail.html -->
+<h1>{{ product.product_type }} - Product Details</h1>
+<p><strong>Product ID:</strong> {{ product.product_id }}</p>
+<p><strong>Type:</strong> {{ product.product_type }}</p>
+<p><strong>Weight:</strong> {{ product.weight }}g</p>
+<p><strong>Seller:</strong> {{ product.seller }}</p>
+
+<p><strong>QR Code:</strong></p>
+{% if product.qr_code %}
+    <img src="{{ product.qr_code.url }}" alt="QR Code for {{ product.product_type }}">
+{% else %}
+    <p>No QR code available.</p>
+{% endif %}

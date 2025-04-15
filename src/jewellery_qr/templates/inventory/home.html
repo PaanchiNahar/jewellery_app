@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jewellery QR</title>
+     <!-- Link to your custom stylesheet -->
+</head>
+<body>
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Jewellery QR!</h1>
+        <p>Use our platform to manage jewellery inventory efficiently with QR code integration.</p>
+
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Inventory Management</li>
+                <li>Real-Time Pricing</li>
+                <li>QR Code Generation for Products</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Get Started</h2>
+            <p>To begin, check out the inventory section or use the admin panel to add products.</p>
+            <p><a href="{% url 'inventory:scan_qr' %}">Scan a QR Code</a></p>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jewellery QR. All rights reserved.</p>
+    </footer>
+</body>
+</html>
