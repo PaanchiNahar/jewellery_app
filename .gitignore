@@ -1,0 +1,22 @@
+# created by virtualenv automatically
+*
+# Ignore virtual environments
+# Ignore the virtual environment
+my_env/
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore the database file (if using SQLite)
+db.sqlite3
+
+# Ignore media files (if you don't want to track user-uploaded files)
+media/
+
+# Ignore any IDE/editor-related files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
