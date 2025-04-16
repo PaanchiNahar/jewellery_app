@@ -1,5 +1,11 @@
 <!-- templates/inventory/product_list.html -->
 <h1>All Products</h1>
+
+<form method="GET" action="{% url 'inventory:search_products' %}">
+    <input type="text" name="q" placeholder="Search by product type..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+
 <ul>
     {% for product in products %}
         <li>

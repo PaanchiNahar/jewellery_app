@@ -11,7 +11,6 @@ __pycache__/
 db.sqlite3
 
 # Ignore media files (if you don't want to track user-uploaded files)
-media/
 
 # Ignore any IDE/editor-related files (e.g., VSCode, PyCharm)
 .idea/

@@ -9,4 +9,6 @@ urlpatterns = [
     path('product/<int:pk>/', views.product_detail_single, name='product_detail_single'),
     path('', views.home, name='home'),
     path('qr_scan/', views.scan_qr, name='scan_qr'),
+    path('product/edit/<int:product_id>/', views.edit_product, name='edit_product'),
+    path('search/', views.search_products, name='search_products'),
 ]

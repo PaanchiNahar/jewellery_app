@@ -22,7 +22,7 @@ class Product(models.Model):
     weight = models.FloatField()
     seller = models.CharField(max_length=100)
     qr_code = models.ImageField(upload_to='qr_codes/', blank=True)
-    
+    price = models.DecimalField(max_digits=10, decimal_places=2 , default = 19000)
 
     def save(self, *args, **kwargs):
         print(f"Saving product: {self.product_type} with ID {self.product_id}")
